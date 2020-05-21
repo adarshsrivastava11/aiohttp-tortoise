@@ -7,7 +7,7 @@ import asyncio
 
 async def db_setup(app):
     await Tortoise.init(
-        db_url='sqlite://db.sqlite3',
+        db_url='sqlite://../db/db.sqlite3',
         modules={'models': ['models']}
     )
     await Tortoise.generate_schemas()
