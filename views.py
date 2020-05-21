@@ -22,12 +22,14 @@ async def handle(request):
 
     # You can query related entity just with async for
     async for team in event.participants:
+        print (team)
         pass
 
     # After making related query you can iterate with regular for,
     # which can be extremely convenient for using with other packages,
     # for example some kind of serializers with nested support
     for team in event.participants:
+        print (team)
         pass
 
     # Or you can make preemptive call to fetch related objects
